@@ -1,24 +1,42 @@
+NAME
+    RT::Extension::AI - [One line description of module's purpose here]
+
+DESCRIPTION
+    [Why would someone install this extension? What does it do? What problem
+    does it solve?]
+
+RT VERSION
+    Works with RT [What versions of RT is this known to work with?]
+
+    [Make sure to use requires_rt and rt_too_new in Makefile.PL]
+
 INSTALLATION
-    Set your rt path
-        export RTHOME=/path/to/rt/
-
-    * Before running the following commands, do: *
-        rm -rf inc
-        sudo apt-get install libmodule-install-perl
-        sudo cpan Install::Module
-        sudo cpan Install::Module::RTx
-
     perl Makefile.PL
-    make initdb
+    make
     make install
+        May need root permissions
 
-    Edit your RT_SiteConfig.pm
+    Edit your /opt/rt4/etc/RT_SiteConfig.pm
         Add this line:
 
             Plugin('RT::Extension::AI');
-            require '<path_to_rt>/local/plugins/RT-Extension-AI/etc/RT_SiteConfig.pm';
 
     Clear your mason cache
-            rm -rf var/mason_data/obj
+            rm -rf /opt/rt4/var/mason_data/obj
 
     Restart your webserver
+
+AUTHOR
+    Best Practical Solutions, LLC <modules@bestpractical.com>
+
+    All bugs should be reported via email to
+        bug-RT-Extension-AI@rt.cpan.org
+    or via the web at
+        http://rt.cpan.org/Public/Dist/Display.html?Name=RT-Extension-AI
+LICENSE AND COPYRIGHT
+    This software is Copyright (c) 2024 by NEEL
+
+    This is free software, licensed under:
+
+      The GNU General Public License, Version 2, June 1991
+
